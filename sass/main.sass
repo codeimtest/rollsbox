@@ -118,6 +118,10 @@ body.lock
 					border-bottom: 1px solid #424242
 				button
 					margin-top: 26px	
+.mobile-bar
+	.logo
+		img
+			width: 30%					
 .slide-nav
 	position: absolute
 	left: 0
@@ -129,8 +133,9 @@ body.lock
 .logo
 	display: flex
 	align-items: center
-	span
-		font-size: 16px					
+	height: 100%
+	img
+		width: 90%	
 .mb-60
 	margin-bottom: 100px
 .swiper-button-disabled
@@ -327,7 +332,7 @@ body.lock
 		height: 100%
 		p
 			margin-bottom: 0
-	h2
+	h2,h3,h4
 		span
 			position: relative
 			&:after
@@ -344,7 +349,8 @@ body.lock
 	height: auto
 	&.img-width
 		width: 100%
-
+.mt-80
+	margin-top: 80px
 .text-center
 	text-align: center
 .orange-btn
@@ -435,11 +441,37 @@ body.lock
 		display: inline-block
 		position: relative
 		z-index: 2		
+.hide-on-desk
+	display: none
 
+.success
+	position: absolute
+	right: 0
+	left: 0
+	top: 0
+	bottom: 0
+	text-transform: uppercase
+	font-weight: 700
+	display: none
+	z-index: 10
+	font-size: 20px	
+	& ~ *
+		transition: 0.2s ease
+	&.active
+		& ~ *
+			opacity: .5
+			filter: blur(10px)
+	span
+		margin: auto
+		text-align: center
+		color: #fff
+.blog-loop
+	overflow: hidden
 header
-	background: url('../img/promo.jpg') no-repeat
+	background: url('../img/promo-alt.jpg') no-repeat
 	height: 100vh
 	background-size: cover
+	background-position-x: center
 	position: relative
 	a
 		color: #fff
@@ -478,6 +510,18 @@ header
 				margin-bottom: 0	
 				li
 					margin-right: 30px
+					a
+						&:after
+							border-bottom: 3px solid $accent
+							content: ''
+							display: block
+							margin: 0.15em auto 0
+							transition: width 250ms ease-in-out 0s
+							width: 0
+						&:hover
+							&:after
+								width: 100%
+								transition: width 100ms ease-in-out 0s
 	a
 		&:hover
 			text-decoration: none
@@ -497,15 +541,57 @@ header
 				line-height: 50px
 				p
 					line-height: 31px
-					margin-bottom: 60px
+					margin-bottom: 20px
 					font-size: 24px
 				h1
 					margin-bottom: 10px	
 					font-size: 40px
+			.facts
+				ul
+					list-style: none
+					padding-left: 0
+					margin-bottom: 60px
+					li
+						color: #fff
+						margin-bottom: 5px		
 		.promo-video
 			color: #fff
 
-
+.burger
+	position: relative
+	width: 36px
+	height: 29px
+	cursor: pointer
+	z-index: 2
+	margin-left: auto
+	background: transparent
+	outline: none
+	border: none
+	span
+		position: absolute
+		background-color: #fff
+		left: 0
+		width: 100%
+		height: 3px
+		top: 13px
+		transition: .3 ease
+	&:before
+		top: 0
+	&:after,&:before
+		content: ''
+		background-color: #fff
+		height: 3px
+		width: 100%
+		position: absolute
+		transition: .3s ease
+	&:after
+		bottom: 0
+		width: 100%
+		right: 0	
+.header-item
+	height: 100%
+	display: flex
+	align-items: center		
 .about-play-video
 	display: flex
 	align-items: center
@@ -556,7 +642,7 @@ header
 	h3
 		margin-bottom: 18px
 	p
-		margin: 0 50px	29px 50px
+		margin: 0 50px
 	.price-before
 		display: flex
 		margin: 0 auto
@@ -585,6 +671,7 @@ header
 				left: 0
 				top: 50%
 	.price-after
+		margin-bottom: 32px
 		p
 			font-size: 23px
 			font-weight: 500
@@ -593,10 +680,21 @@ header
 				font-size: 37px
 				margin-left: 10px
 	figure
+		margin-top: 29px
 		img
 			width: 100%
 			object-fit: cover
 			height: 195px
+.show_hide
+	margin-top: 14px
+	display: block
+	color: #000
+	text-decoration: underline
+	font-weight: 700
+	&:hover
+		color: $accent
+.hidden-content
+	margin: 0 50px 0 50px		
 footer
 	background: #000
 	.footer-widget
@@ -717,4 +815,91 @@ footer
 				color: $alt-text
 			img
 				margin-left: 18px	
+				width: 100%
+.steps
+	margin: 80px 0 50px 0
+.step
+	text-align: center
+	h4
+		padding: 0 40px
+		font-size: 24px
+	.step-num			
+		background: #000
+		border-radius: 100%
+		text-align: center
+		color: #fff
+		font-weight: 700
+		font-size: 27px
+		display: flex
+		width: 50px
+		height: 50px
+		margin: auto
+		justify-content: center
+		align-items: center
+		margin-bottom: 20px	
+	.after-line
+		&:after
+			content: ''
+			height: 1px
+			width: 78%
+			position: absolute
+			background: #c1c1c1
+			right: -38%
+			top: 9%	
+.swiper-container.product_slider
+	padding-bottom: 40px
+	margin-bottom: 80px
+	margin-top: 40px
+	img
+		width: 100%
+		display: block
+		margin: 0 auto
+	.swiper-slide
+		opacity: 0
+		img
+			opacity: 0
+			transition: .3s all ease
+	.swiper-slide.swiper-slide-visible
+		opacity: 1
+		img
+			opacity: 1
+	&:after
+		content: ''
+		position: absolute
+		bottom: 8px
+		left: 50%
+		display: block
+		width: 65%
+		height: 250px
+		border: 1px solid #868686
+		border-radius: 50%
+		transform: rotateX(30deg) translateX(-50%)
+		border-top: none		
+.product_slider_nav
+	display: flex
+	position: absolute
+	bottom: 6px
+	left: 50%
+	transform: translateX(-50%)
+	padding: 0 10px
+	background: #fff
+	z-index: 10
+	font-size: 25px
+	.product_slider_nav_prev
+		margin-right: 15px
+		cursor: pointer
+	.product_slider_nav_next
+		margin-left: 15px
+		cusror: pointer	
+	.product_slider_nav_next,.product_slider_nav_prev
+		i
+			color: $accent
+.swiper-container.product_slider
+	.swiper-slide.swiper-slide-visible
+		img
+			opacity: 1	
+.swiper-container.product_slider
+	.swiper-slide.swiper-slide-active
+		img
+			opacity: 1				
 @import "media" // Always at the end

@@ -13,7 +13,7 @@ const items = document.querySelectorAll(".accordion button");
 	}
 	items.forEach(item => item.addEventListener('click', toggleAccordion));
 	var swiper = new Swiper('#blog-carousel', {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 24,
   noSwiping: true,
   loop: false,
@@ -22,7 +22,53 @@ const items = document.querySelectorAll(".accordion button");
     nextEl: '.blog-button-next',
     prevEl: '.blog-button-prev',
   },
+  breakpoints: {
+990: {
+        slidesPerView: 2,
+        spaceBetween: 23,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 23,
+      }
+  }
 });
+	const product_slider = new Swiper('.swiper-container.product_slider', {
+    loop: true,
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 3,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    followFinger: false,
+    initialSlide: 1,
+    spaceBetween: 10,
+    coverflowEffect: {
+        rotate: 12,
+        stretch: 1300,
+        depth: 500,
+        modifier: 2,
+        stretch: 5,
+        slideShadows: false,
+    },
+    navigation: {
+        nextEl: '.product_slider_nav_next',
+        prevEl: '.product_slider_nav_prev',
+    },
+    breakpoints: {
+    	1024: {
+        slidesPerView: 4,
+      },
+    }
+});
+$(".hidden-content").hide();
+    $(".show_hide").on("click", function () {
+        
+        $(this).prev('.hidden-content').slideToggle(200);
+        return false;
+
+    });
 	var swiper = new Swiper('#production-carousel', {
   slidesPerView: 1,
   spaceBetween: 0,
@@ -40,6 +86,7 @@ const items = document.querySelectorAll(".accordion button");
           return '<span>' + '0' +current + '/' + '0' + (total + 0) + '</span>'; 
         }
       },
+
 });
 	$('.gallery').each(function() { // the containers for all your galleries
     $(this).magnificPopup({
@@ -76,4 +123,20 @@ type: 'iframe',
 		$('.popup-contact').removeClass('active');
 		$('body').removeClass('lock');
 	});
+
+  $(".form").submit(function(){
+    var th = $(this);
+    $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: th.serialize()
+    }).done(function(){
+        $(th).find('.success').addClass('active').css('display','flex').hide().fadeIn();
+        setTimeout(function(){
+            $(th).find('.success').removeClass('active').fadeOut();
+            th.trigger('reset');
+        }, 5000);
+    });
+    return false;
+});
 });
