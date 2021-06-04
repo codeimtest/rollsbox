@@ -5,17 +5,120 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
-
+	header .top-bar .top-nav .top-nav-item
+		font-size: 14px
+		margin-right: 27px
+	header .top-bar .main-nav ul li
+		margin-right: 20px
+		a
+			font-size: 16px	
+	.storage-type p,.hidden-content
+		margin: 0 16px
+		font-size: 16px
+	footer .footer-widget .footer-phone
+		width: 86%
+	.main-btn,.orange-btn
+		padding: 16px 39px			
 // ≥992px
 +media-breakpoint-down(md)
-
+	.mobile-bar
+		.logo
+			img
+				width: 50%
+		.mobile-phone
+			height: 100%
+			display: flex
+			align-items: center
+			a
+				font-size: 22px
+			i
+				color: #fff
+				margin-right: 20px			
+	footer .copyright .payment img
+		margin-left: 0
+	footer .footer-widget .footer-phone
+		width: 100%
+	.gallery
+		margin: 0
+		.gallery-item
+			width: 50%	
+	.production
+		margin-bottom: 30px
+	.hide-on-desk
+		display: flex
+	.hide-on-mob
+		display: none
+	.storage-type
+		margin-bottom: 40px
+	.steps
+		.step
+			margin-bottom: 40px
+			&::last-child
+				margin-bottom: 0
+			.after-line
+				&:after
+					content: none
 // ≥768px
 +media-breakpoint-down(sm)
-
+	footer .footer-widget .footer-phone
+		width: 60%
+	.main-btn,.orange-btn
+		font-size: 17px
+	footer
+		padding-top: 40px
+		padding-bottom: 20px
+		.footer-widget
+			padding: 20px 0
+			.logo-desc
+				margin-right: 70px
+		.copyright
+			text-align: center	
+			.payment
+				margin-top: 12px
+				flex-flow: column
+				p
+					margin-bottom: 10px
+	.popup-contact .popup-dialog .popup-wrap .modal-close
+		right: 0	
+		width: 50px
+		height: 50px		
+	.swiper-container.product_slider:after
+		content: none		
 // ≥576px
 +media-breakpoint-down(xs)
-
-
+	.mobile-phone
+		justify-content: flex-end
+	.mobile-bar .mobile-phone a
+		text-align: right
+	.popup-contact .popup-dialog .popup-wrap
+		padding: 2rem
+	footer .footer-widget .footer-phone
+		width: 77%
+	header .promo .promo-wrap .promo-title h1
+		font-size: 34px
+	header .promo .promo-wrap .promo-title p
+		font-size: 17px
+	header .promo .promo-wrap .facts ul li
+		font-size: 14px
+	.about-play-video p
+		font-size: 11px
+	.about-play-video a
+		width: 50px
+		height: 50px		
+	.main-btn, .orange-btn
+		font-size: 13px
+	.popup-contact .popup-dialog .popup-wrap .modal-close
+		right: 5%
+	footer .footer-widget .logo-desc
+		margin-right: 0
+	footer .footer-widget .footer-logo .logo-desc p	
+		font-size: 11px	
+	h2
+		font-size: 32px	
+		line-height: 39px
+	.accordion button .icon
+		bottom: 18px
+		top: inherit
 /*==========  Mobile First  ==========*/
 
 // ≤576px
