@@ -61,7 +61,7 @@ const items = document.querySelectorAll(".accordion button");
     },
     breakpoints: {
     	1024: {
-        slidesPerView: 5,
+        slidesPerView: 3.5,
       },
     }
 });
