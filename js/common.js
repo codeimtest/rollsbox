@@ -38,7 +38,7 @@ const items = document.querySelectorAll(".accordion button");
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: 3,
+    slidesPerView: 2,
     watchSlidesProgress: true,
     watchSlidesVisibility: true,
     followFinger: false,
@@ -73,6 +73,8 @@ $(".hidden-content").hide();
 
     });
 	var swiper = new Swiper('#production-carousel', {
+     preventClicks: false,
+    preventClicksPropagation: false,
   slidesPerView: 1,
   spaceBetween: 0,
   noSwiping: true,
@@ -107,9 +109,14 @@ var swiper = new Swiper('#works-carousel', {
       delay: 5500,
       disableOnInteraction: false,
     },
-    clickable: true
+    clickable: true,
+ breakpoints: {
+      1024: {
+        slidesPerView: 4,
+      },
+    }
 });
-	$('.gallery').each(function() { // the containers for all your galleries
+	$('.gallery1').each(function() { // the containers for all your galleries
     $(this).magnificPopup({
         delegate: 'a', // the selector for gallery item
         type: 'image',

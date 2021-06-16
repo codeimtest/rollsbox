@@ -124,7 +124,9 @@ body.lock
 .mobile-bar
 	.logo
 		img
-			width: 30%					
+			width: 30%		
+.swiper-slide 
+	display: block				
 .slide-nav
 	position: absolute
 	left: 0
@@ -132,11 +134,33 @@ body.lock
 	bottom: 0
 	right: 0
 	span
-		color: #fff					
+		color: #fff		
+.item
+	&:after
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		background: rgba(0,0,0,0.4)
+		width: 100%
+		height: 100%		
+.city-about
+	font-size: 24px
+	text-align: center
+	font-weight: 700
+.mobile-phone-wrap
+	display: flex
+	align-items: center		
+.messengers
+	margin-right: 6px
+	img
+		width: 30px 
+		height: 30px					
 .logo
 	display: flex
 	align-items: center
 	height: 100%
+	padding: 18px 0
 	img
 		width: 25%	
 .mb-60
@@ -593,8 +617,7 @@ header
 		width: 100%
 		right: 0
 		bottom: 0
-		top: 0
-		align-items: center
+		top: 21%
 		.promo-wrap
 			padding-top: 0
 			.promo-title
@@ -751,7 +774,7 @@ header
 			object-fit: cover
 			height: 195px
 span.logo-title
-	font-size: 12px
+	font-size: 17px
 	margin-left: 10px
 .show_hide
 	margin-top: 14px
