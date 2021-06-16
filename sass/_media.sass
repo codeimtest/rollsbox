@@ -6,7 +6,7 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 	.logo img
-		width: 24%
+		width: 100%
 	header .promo .promo-wrap .promo-title h1
 		font-size: 35px
 	header .top-bar .top-nav .top-nav-item
@@ -45,12 +45,10 @@
 		font-size: 12px
 	.mt-80
 		margin-top: 30px
-	.mobile-bar .logo img
-		width: 28%
 	span.logo-title
 		font-size: 18px
 	.rolls
-		margin-bottom: 40px
+		margin-bottom: 70px
 	#works-carousel
 		.item
 			img
@@ -98,15 +96,28 @@
 			color: #fff
 			margin-right: 10px	
 	.city-about
-		display: block					
+		display: block	
+	.messengers
+		width: auto		
+	.logo img
+		width: 270px
+	.mobile-bar-phone
+		width: 100%
+	#mobile-bar.fixed
+		padding: 0			
 // ≥768px
 +media-breakpoint-down(sm)
+
 	span.logo-title
 		margin-left: 5px
 	footer .footer-widget .footer-phone
 		width: 220px
 	.main-btn,.orange-btn
 		font-size: 17px
+	.logo img
+		width: 230px	
+	.mobile-bar-phone
+		width: 100%	
 	footer
 		padding-top: 40px
 		padding-bottom: 20px
@@ -138,8 +149,28 @@
 		margin-bottom: 6px
 	span.logo-title
 		font-size: 15px		
+	.messengers
+		justify-content: center
+	.mobile-widgets
+		flex-flow: column-reverse
+		display: flex	
 // ≥576px
 +media-breakpoint-down(xs)
+	.mobile-widgets
+		display: flex
+		flex-flow: column-reverse
+	.mobile-bar-phone
+		width: 100%
+		a
+			font-size: 16px
+	.messengers
+		justify-content: center
+		display: flex
+		width: 100%	
+	.mobile-logo
+		width: 58%
+	.logo img
+		width: 100%	
 	.mobile-phone i
 		font-size: 14px
 	.mobile-phone

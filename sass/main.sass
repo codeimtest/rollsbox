@@ -27,7 +27,7 @@ body
 b, strong
 	font-weight: bold
 section
-	padding: 60px 0		
+	padding: 100px 0		
 .alt-link
 	text-decoration: underline
 	font-weight: 700
@@ -121,14 +121,21 @@ body.lock
 .about-carousel
 	margin-bottom: 	50px
 	font-size: 	20px					
-.mobile-bar
-	.logo
-		img
-			width: 30%		
+.mobile-wrap-header
+	display: flex
+	align-items: center
+	justify-content: space-between
+.messengers
+	display: flex
+	width: 30%
+.mobile-bar-phone
+	display: flex
+	justify-content: flex-end
+	width: 55%		
 .swiper-slide 
 	display: block
 .city-about
-	display: none					
+	display: block					
 .slide-nav
 	position: absolute
 	left: 0
@@ -154,17 +161,18 @@ body.lock
 	display: flex
 	align-items: center		
 .messengers
-	margin-right: 6px
-	img
-		width: 30px 
-		height: 30px					
+	a
+		margin: 0 10px
+		img
+			width: 30px 
+			height: 30px					
 .logo
 	display: flex
 	align-items: center
 	height: 100%
 	padding: 18px 0
 	img
-		width: 18%	
+		width: 286px	
 .mb-60
 	margin-bottom: 100px
 .swiper-button-disabled
