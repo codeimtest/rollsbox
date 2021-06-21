@@ -33,6 +33,7 @@ const items = document.querySelectorAll(".accordion button");
       }
   }
 });
+
 	const product_slider = new Swiper('.swiper-container.product_slider', {
     loop: true,
     effect: "coverflow",
@@ -133,7 +134,7 @@ var swiper = new Swiper('#works-carousel', {
     $('html, body').animate({
         scrollTop: $(href).offset().top
     }, {
-        duration: 370,   // по умолчанию «400» 
+        duration: 570,   // по умолчанию «400» 
         easing: "linear" // по умолчанию «swing» 
     });
 
@@ -189,4 +190,6 @@ type: 'iframe',
     });
     return false;
 });
+
+
 });

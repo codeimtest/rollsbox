@@ -31,7 +31,7 @@
 
 <body>
 
-	<header>
+	<header  id="promo">
 		<div class="mobile-bar hide-on-desk" id="mobile-bar">
 			<div class="container">
 				<div class="row">
@@ -112,7 +112,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="promo" id="promo">
+		<div class="promo">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6">
@@ -144,6 +144,40 @@
 			</div>
 		</div>
 	</header>
+	<section id="premium">
+		<div class="container">
+			<div class="alt-section-title">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="text-center">Rolls Box Premium</h2>
+					</div>
+				</div>
+			</div>
+			<div class="">
+				<div class="col-12 col-lg-10 offset-lg-1">
+					<div id="swap_slider">
+						<div><img src="img/box_paints.png"></div>
+						<div><img src="img/box_bagaj.png"></div>
+						<div><img src="img/box_velik.png"></div>
+						<div><img src="img/box_Kolosa.png"></div>
+						<div><img src="img/box_snow.png"></div>
+						<div><img src="img/box_bike.png"></div>
+						<div><img src="img/box_Kolaska.png"></div>
+				
+					</div>
+				</div>
+			</div>
+			<div class="row">	
+				<div class="col-12">	
+					<p class="text-center about-carousel">	
+						<b>Rolls Box Premium</b> - это шкафы нового поколения, которые изготавливаются<br> в семи цветах из высокотехнологичных материалов.</p>
+					</div>
+				</div>	
+				<div class="row">	
+					<button class="orange-btn btn-center contact"><span>Узнать стоимость</span></button>
+				</div>	
+			</div>
+		</section>
 	<section id="city">
 		<div class="container">
 			<div class="row">
@@ -159,60 +193,7 @@
 			</div>
 		</div>
 	</section>
-	<section id="premium">
-		<div class="container">
-			<div class="alt-section-title">
-				<div class="row">
-					<div class="col-12">
-						<h2 class="text-center">Rolls Box Premium</h2>
-					</div>
-				</div>
-			</div>
-			<div class="">
-				<div class="col-12">
-					<div class="swiper-container product_slider">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<img src="img/box_velik.png" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="img/box_bagaj.png" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="img/box_bike.png" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="img/box_Kolaska.png" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="img/box_Kolosa.png" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="img/box_paints.png" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="img/box_snow.png" alt="">
-							</div>
-						</div>
-						<div class="product_slider_nav">
-							<div class="product_slider_nav_prev"> <i class="fas fa-arrow-left"></i></div>
-							
-							<div class="product_slider_nav_next"> <i class="fas fa-arrow-right"></i></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">	
-				<div class="col-12">	
-					<p class="text-center about-carousel">	
-						<b>Rolls Box Premium</b> - это шкафы нового поколения, которые изготавливаются<br> в семи цветах из высокотехнологичных материалов.</p>
-					</div>
-				</div>	
-				<div class="row">	
-					<button class="orange-btn btn-center contact"><span>Узнать стоимость</span></button>
-				</div>	
-			</div>
-		</section>
+
 		<section id="prices">
 			<div class="container">
 				<div class="row">
@@ -961,5 +942,21 @@
     function noselect() {return false;}
     */
   </script>
+  <script src="libs/swap-slider/swap_slider.js"></script>
+  <script>
+
+    $(function(){
+        if($(window).width() > 768) {
+            $.swapSlider("#swap_slider");
+            $.swapSlider("#swap_slider1", {step_width: 4, center_width: 40, step_pos: 8});
+            $.swapSlider("#swap_slider2", {step_width: 4, center_width: 40, step_pos: 8,time:400});
+        }else{
+            $.swapSlider("#swap_slider", {step_width: 4, center_width: 50, step_pos: 9});
+            $.swapSlider("#swap_slider1", {step_width: 4, center_width: 45, step_pos: 7});
+            $.swapSlider("#swap_slider2", {step_width: 4, center_width: 40, step_pos: 12});
+        }
+    })
+
+</script>
 </body>
 </html>
