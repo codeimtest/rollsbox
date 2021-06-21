@@ -35,6 +35,15 @@
 			padding: 16px 17px
 // ≥992px
 +media-breakpoint-down(md)
+	.mobile-promo .promo-title h1
+		line-height: 43px
+		font-size: 39px
+	header 
+		height: 78vh
+		.promo
+			display: none
+	#mobile-bar
+		background: #000
 	header .promo .promo-wrap
 		padding-top: 100px
 	.rolls p
@@ -109,7 +118,9 @@
 		padding: 100px 0 20px 0		
 // ≥768px
 +media-breakpoint-down(sm)
-
+	.mobile-promo .promo-title h1
+		line-height: 31px
+		font-size: 28px
 	span.logo-title
 		margin-left: 5px
 	footer .footer-widget .footer-phone
@@ -158,6 +169,8 @@
 		display: flex	
 // ≥576px
 +media-breakpoint-down(xs)
+	header
+		height: 58vh
 	.mobile-widgets
 		display: flex
 		flex-flow: column-reverse
