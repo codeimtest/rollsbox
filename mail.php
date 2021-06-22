@@ -13,8 +13,8 @@ $phone = $_POST['user_tel'];
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.yandex.ru';  																							// Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'codeim@yandex.ru'; // Ваш логин от почты с которой будут отправляться письма
-$mail->Password = 'Gl1ks0gen091288'; // Ваш пароль от почты с которой будут отправляться письма
+$mail->Username = 'rollsboxdev@yandex.ru'; // Ваш логин от почты с которой будут отправляться письма
+$mail->Password = 'Fordevs2021'; // Ваш пароль от почты с которой будут отправляться письма
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
