@@ -32,6 +32,8 @@ section
 .swap-slider_slide
 	position: absolute
 	cursor: pointer
+	top: 50%
+	transform: translateY(-50%)
 	img
 		width: 100%
 .mobile-promo
@@ -50,12 +52,14 @@ section
 				margin-bottom: 10px
 				i
 					margin-right: 10px
+.swap-slider_slide.center-slide
+	margin-top: -1%					
 .swap-slider_wrapper
 	position: relative
 	display: flex
 	display: -ms-flexbox
 	align-items: center	
-	margin-bottom: 40px	
+	
 .alt-link
 	text-decoration: underline
 	font-weight: 700

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="swap_slider.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="swap_slider.css">
+</head>
+<body>
+    <div id="swap_slider">
+        <div><img src="img/1.jpg"></div>
+        <div><img src="img/2.jpg"></div>
+        <div><img src="img/3.jpg"></div>
+        <div><img src="img/4.jpg"></div>
+        <div><img src="img/5.jpg"></div>
+        <div><img src="img/6.jpg"></div>
+        <div><img src="img/7.jpg"></div>
+
+    </div>
+    <div id="swap_slider1">
+        <div><img src="img/1.jpg"></div>
+        <div><img src="img/2.jpg"></div>
+        <div><img src="img/3.jpg"></div>
+        <div><img src="img/4.jpg"></div>
+        <div><img src="img/5.jpg"></div>
+        <div><img src="img/6.jpg"></div>
+        <div><img src="img/7.jpg"></div>
+        <div><img src="img/7.jpg"></div>
+        <div><img src="img/7.jpg"></div>
+    </div>
+    <div id="swap_slider2">
+        <div><img src="img/8.jpg"></div>
+        <div><img src="img/8.jpg"></div>
+        <div><img src="img/8.jpg"></div>
+        <div><img src="img/8.jpg"></div>
+        <div><img src="img/8.jpg"></div>
+        <div><img src="img/8.jpg"></div>
+        <div><img src="img/8.jpg"></div>
+    </div>
+</body>
+<script>
+
+    $(function(){
+        if($(window).width() > 768) {
+            $.swapSlider("#swap_slider");
+            $.swapSlider("#swap_slider1", {step_width: 4, center_width: 40, step_pos: 8});
+            $.swapSlider("#swap_slider2", {step_width: 4, center_width: 40, step_pos: 8,time:400});
+        }else{
+            $.swapSlider("#swap_slider", {step_width: 4, center_width: 50, step_pos: 9});
+            $.swapSlider("#swap_slider1", {step_width: 4, center_width: 45, step_pos: 7});
+            $.swapSlider("#swap_slider2", {step_width: 4, center_width: 40, step_pos: 12});
+        }
+    })
+
+</script>
+</html>

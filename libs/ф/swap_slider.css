@@ -1,0 +1,18 @@
+.swap-slider_slide{
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.swap-slider_slide.center-slide{
+    margin-top:-1%;
+}
+.swap-slider_slide img{
+    width:100%;
+}
+.swap-slider_wrapper{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
